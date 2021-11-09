@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Matt Heiler",
+  "classifications": [ "ProgrammerGrammar", "Web", "C#" ],
+  "name": "Programmer Grammar Identity Gateway",
+  "identity": "ProgrammerGrammar.IdentityGateway",
+  "groupIdentity": "ProgrammerGrammar.IdentityGateway",
+  "shortName": "identitygateway",
+  "preferNameDirectory": true,
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "IdentityGateway",
+  "symbols": {
+    "devWebHttp": {
+      "type": "generated",
+      "generator": "port",
+      "replaces": "59001"
+    },
+    "devWebAppDevServer": {
+      "type": "generated",
+      "generator": "port",
+      "replaces": "59002"
+    },
+    "devWebAppHotReload": {
+      "type": "generated",
+      "generator": "port",
+      "replaces": "59003"
+    },
+    "dbSql": {
+      "type": "generated",
+      "generator": "port",
+      "replaces": "59004"
+    }
+  }
+}

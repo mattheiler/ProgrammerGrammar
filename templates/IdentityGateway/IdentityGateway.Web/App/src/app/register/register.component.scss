@@ -1,0 +1,38 @@
+@import "../../breakpoints";
+@import "../../layouts";
+@import "../../utils";
+
+:host {
+    @include flex(column);
+    @include flex-align(center, center);
+
+    form {
+        max-width: 500px;
+        margin: 16px 8px;
+
+        @include flex(column);
+        @include flex-align(center);
+
+        fieldset {
+            border: none;
+            padding: 0;
+
+            @include media-lteq(sm) {
+                @include flex(column);
+            }
+
+            mat-form-field {
+                margin: 8px;
+            }
+        }
+
+        p {
+            margin: 16px;
+            text-align: center;
+        }
+
+        button {
+            margin: 0 auto;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+<img src="../../assets/logo.png" alt="Logo" width="400"/>
+<form #registerForm="ngForm" (ngSubmit)="registerForm.valid && register()">
+    <fieldset>
+        <mat-form-field>
+            <mat-label>Username</mat-label>
+            <input matInput name="registration--username" #usernameCtrl="ngModel" [(ngModel)]="form.username" type="text" required/>
+            <mat-error>
+                <div [hidden]="!usernameCtrl.errors?.required">Required</div>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput name="registration--email" #emailCtrl="ngModel" [(ngModel)]="form.email" type="text" required/>
+            <mat-error>
+                <div [hidden]="!emailCtrl.errors?.required">Required</div>
+            </mat-error>
+        </mat-form-field>
+    </fieldset>
+    <fieldset>
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput name="registration--password" #passwordCtrl="ngModel" [(ngModel)]="form.password" type="password" required/>
+            <mat-error>
+                <div [hidden]="!passwordCtrl.errors?.required">Required</div>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Confirm Password</mat-label>
+            <input matInput name="registration--password-confirm" #passwordConfirmCtrl="ngModel" [(ngModel)]="form.passwordConfirm" type="password" required/>
+            <mat-error>
+                <div [hidden]="!passwordConfirmCtrl.errors?.required">Required</div>
+            </mat-error>
+        </mat-form-field>
+    </fieldset>
+    <fieldset>
+        <mat-form-field>
+            <mat-label>First Name</mat-label>
+            <input matInput name="registration--first-name" #firstNameCtrl="ngModel" [(ngModel)]="form.firstName" type="text" required/>
+            <mat-error>
+                <div [hidden]="!firstNameCtrl.errors?.required">Required</div>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input matInput name="registration--last-name" #lastNameCtrl="ngModel" [(ngModel)]="form.lastName" type="text" required/>
+            <mat-error>
+                <div [hidden]="!lastNameCtrl.errors?.required">Required</div>
+            </mat-error>
+        </mat-form-field>
+    </fieldset>
+    <p>By clicking <strong>Register</strong>, you agree to our Terms and that you have read our Data Policy, including our Cookie Use. You may receive SMS Notifications from We the People and can opt out at any time.</p>
+    <button mat-raised-button color="accent">Register</button>
+</form>

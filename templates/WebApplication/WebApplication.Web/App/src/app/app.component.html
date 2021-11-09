@@ -1,0 +1,62 @@
+<ng-template [ngIf]="hasLayout$ | async" [ngIfElse]="noLayout">
+    <mat-sidenav-container class="app-nav-container" hasBackdrop="false">
+        <mat-sidenav class="app-nav" mode="side" [opened]="navOpened" fixedInViewport [fixedTopGap]="navOffset">
+            <mat-toolbar *ngIf="navToolbarIsVisible">
+                <button mat-icon-button (click)="navClose()">
+                    <mat-icon>arrow_back</mat-icon>
+                </button>
+            </mat-toolbar>
+            <mat-nav-list class="app-nav-list" dense>
+                <a mat-list-item class="app-nav-list-item" routerLinkActive="active" routerLink="/home">
+                    <mat-icon mat-list-icon>home</mat-icon>
+                    <div mat-line>Home</div>
+                </a>
+            </mat-nav-list>
+            <mat-divider></mat-divider>
+            <mat-nav-list class="app-nav-list" dense>
+                <!-- 
+                Add app nav buttons here...
+                <a mat-list-item class="app-nav-list-item" routerLinkActive="active" routerLink="/hot-tubs">
+                    <mat-icon mat-list-icon>hot_tubs</mat-icon>
+                    <div mat-line>Hot tubs</div>
+                </a>
+                -->
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content class="app">
+            <mat-toolbar class="app-header" color="primary">
+                <button mat-icon-button (click)="navOpenedToggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <span class="app-title">WebApplication</span>
+                <div class="app-actions">
+                    <button mat-icon-button [matMenuTriggerFor]="accountMenu">
+                        <mat-icon>account_circle</mat-icon>
+                    </button>
+                </div>
+            </mat-toolbar>
+            <main class="app-main">
+                <div class="app-content">
+                    <router-outlet></router-outlet>
+                </div>
+            </main>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+    <mat-menu #accountMenu="matMenu">
+        <ng-template [ngIf]="authenticated$ | async" [ngIfElse]="signout">
+            <button mat-menu-item (click)="logout()">
+                <mat-icon>logout</mat-icon>
+                <span>Logout</span>
+            </button>
+        </ng-template>
+        <ng-template #signout>
+            <button mat-menu-item (click)="login()">
+                <mat-icon>exit_to_app</mat-icon>
+                <span>Login</span>
+            </button>
+        </ng-template>
+    </mat-menu>
+</ng-template>
+<ng-template #noLayout>
+    <router-outlet></router-outlet>
+</ng-template>

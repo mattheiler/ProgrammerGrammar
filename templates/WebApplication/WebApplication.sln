@@ -1,0 +1,57 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication.Core", "WebApplication.Core\WebApplication.Core.csproj", "{16F86C96-A2D5-406B-9335-8D09AF6FA87C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication.Infrastructure", "WebApplication.Infrastructure\WebApplication.Infrastructure.csproj", "{4915EBCB-B999-4F19-AED9-C3A5008EA748}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication.Web", "WebApplication.Web\WebApplication.Web.csproj", "{F2D04F93-87E0-404E-9C45-E472EDD2E31B}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{82ADE3B0-7F2C-4CD0-ACDA-1A7DA17BB83D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication.Tests", "WebApplication.Tests\WebApplication.Tests.csproj", "{A5E164BE-F418-4557-9ACC-C44683E40121}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{38A43908-7441-4411-90F9-FE68E33926D2}"
+	ProjectSection(SolutionItems) = preProject
+		.filenesting.json = .filenesting.json
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		Jenkinsfile = Jenkinsfile
+		NuGet.config = NuGet.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16F86C96-A2D5-406B-9335-8D09AF6FA87C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16F86C96-A2D5-406B-9335-8D09AF6FA87C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16F86C96-A2D5-406B-9335-8D09AF6FA87C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16F86C96-A2D5-406B-9335-8D09AF6FA87C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4915EBCB-B999-4F19-AED9-C3A5008EA748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4915EBCB-B999-4F19-AED9-C3A5008EA748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4915EBCB-B999-4F19-AED9-C3A5008EA748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4915EBCB-B999-4F19-AED9-C3A5008EA748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2D04F93-87E0-404E-9C45-E472EDD2E31B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2D04F93-87E0-404E-9C45-E472EDD2E31B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2D04F93-87E0-404E-9C45-E472EDD2E31B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2D04F93-87E0-404E-9C45-E472EDD2E31B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82ADE3B0-7F2C-4CD0-ACDA-1A7DA17BB83D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82ADE3B0-7F2C-4CD0-ACDA-1A7DA17BB83D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82ADE3B0-7F2C-4CD0-ACDA-1A7DA17BB83D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82ADE3B0-7F2C-4CD0-ACDA-1A7DA17BB83D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5E164BE-F418-4557-9ACC-C44683E40121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5E164BE-F418-4557-9ACC-C44683E40121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5E164BE-F418-4557-9ACC-C44683E40121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5E164BE-F418-4557-9ACC-C44683E40121}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7D5F38E-162C-43AD-B387-A8DD2690FB6C}
+	EndGlobalSection
+EndGlobal

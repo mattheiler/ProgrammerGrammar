@@ -1,0 +1,33 @@
+<img src="../../assets/logo.png" alt="Logo" width="400"/>
+<form (ngSubmit)="login()">
+    <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput name="login--username" #usernameCtrl="ngModel" [(ngModel)]="form.username" type="text" required/>
+        <mat-error>
+            <div [hidden]="!usernameCtrl.errors?.required">Required</div>
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput name="login--password" #passwordCtrl="ngModel" [(ngModel)]="form.password" type="password" required/>
+        <mat-error>
+            <div [hidden]="!passwordCtrl.errors?.required">Required</div>
+        </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="accent">Login</button>
+</form>
+<a mat-button button color="accent" routerLink="/register">Register</a>
+
+<ng-template #errors let-data>
+    <h1 mat-dialog-title>
+        <mat-icon color="warn">error</mat-icon> Error
+    </h1>
+    <mat-dialog-content>
+        <mat-list>
+            <mat-list-item *ngFor="let error of data" class="text-error">{{ error }}</mat-list-item>
+        </mat-list>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>Okay</button>
+    </mat-dialog-actions>
+</ng-template>

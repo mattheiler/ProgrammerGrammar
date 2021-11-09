@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Matt Heiler",
+  "classifications": [ "Questar", "Web", "C#" ],
+  "name": "Programmer Grammar Web Application",
+  "identity": "ProgrammerGrammar.WebApplication",
+  "groupIdentity": "ProgrammerGrammar.WebApplication",
+  "shortName": "webapp",
+  "preferNameDirectory": true,
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "WebApplication",
+  "symbols": {
+    "devWebHttp": {
+      "type": "generated",
+      "generator": "port",
+      "replaces": "50001"
+    },
+    "devWebAppDevServer": {
+      "type": "generated",
+      "generator": "port",
+      "replaces": "50002"
+    },
+    "devWebAppHotReload": {
+      "type": "generated",
+      "generator": "port",
+      "replaces": "50003"
+    },
+    "dbSql": {
+      "type": "generated",
+      "generator": "port",
+      "replaces": "50004"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../layouts";
+@import "../../utils";
+
+:host {
+    @include flex(column);
+    @include flex-align(center, center);
+    @include fullscreen();
+
+    form {
+        margin: 16px 8px;
+
+        @include flex(column);
+        @include flex-align(center);
+
+        mat-form-field {
+            margin: 8px;
+        }
+
+        button {
+            margin-top: 16px;
+        }
+    }
+
+    button {
+        margin-top: 16px;
+    }
+}

@@ -1,0 +1,59 @@
+@import "../breakpoints";
+@import "../layouts";
+
+:host {
+
+    .app-nav-container {
+        background-color: transparent;
+        overflow: visible;
+
+        .app-nav {
+            border-right-style: solid;
+            border-right-width: 1px;
+            box-shadow: none;
+            width: 260px;
+        }
+
+        .app {
+            background-color: transparent;
+            overflow: visible;
+
+            .app-header {
+                border-bottom-style: solid;
+                border-bottom-width: 1px;
+                left: 0;
+                position: fixed;
+                right: 0;
+                top: 0;
+                z-index: 1;
+
+                .app-title {
+                    margin-left: 16px;
+                }
+
+                .app-actions {
+                    margin-left: auto;
+                }
+            }
+
+            .app-main {
+                position: relative;
+                min-width: 0;
+
+                @include flex(row);
+
+                @include media-lt(sm) {
+                    top: 56px;
+                }
+
+                @include media-gteq(sm) {
+                    top: 64px;
+                }
+
+                .app-content {
+                    @include flex-item(auto);
+                }
+            }
+        }
+    }
+}

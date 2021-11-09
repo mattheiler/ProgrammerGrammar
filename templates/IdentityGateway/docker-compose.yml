@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  identitygateway.web:
+    image: ${DOCKER_REGISTRY-}identitygatewayweb
+    container_name: IdentityGateway.Web
+    build:
+      context: .
+      dockerfile: IdentityGateway.Web/Dockerfile

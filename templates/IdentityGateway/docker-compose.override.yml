@@ -1,0 +1,31 @@
+version: '3.4'
+
+services:
+  identitygateway.web:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - 59001:80
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+  identitygateway.webapp:
+    image: ${DOCKER_REGISTRY-}identitygatewaywebapp
+    container_name: IdentityGateway.WebApp
+    build:
+      context: ./IdentityGateway.Web/App
+    ports:
+      - 59002:4200
+      - 59003:49153
+    volumes:
+      - ./IdentityGateway.Web/App/src:/app/src
+  identitygateway.db:
+    image: mcr.microsoft.com/mssql/server
+    container_name: IdentityGateway.Db
+    ports:
+      - 59004:1433
+    environment:
+      SA_PASSWORD: "Password123"
+      ACCEPT_EULA: "Y"
+    volumes:
+      - ${APPDATA}/IdentityGateway/db/mssql/data:/var/opt/mssql/data

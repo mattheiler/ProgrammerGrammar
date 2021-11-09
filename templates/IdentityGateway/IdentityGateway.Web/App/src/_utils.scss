@@ -1,0 +1,18 @@
+﻿@mixin disable() {
+    user-select: none;
+    pointer-events: none;
+}
+
+@mixin ellipsis {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin fullscreen($position: absolute) {
+    bottom: 0;
+    left: 0;
+    position: $position;
+    right: 0;
+    top: 0;
+}

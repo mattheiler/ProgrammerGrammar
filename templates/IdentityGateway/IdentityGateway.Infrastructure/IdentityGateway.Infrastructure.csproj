@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<UserSecretsId>35f00b1d-2453-4329-8f16-9ea9f37a1678</UserSecretsId>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="IdentityServer4.EntityFramework.Storage" Version="3.1.4" />
+		<PackageReference Include="Microsoft.AspNetCore.DataProtection.EntityFrameworkCore" Version="3.1.17" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.17" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.17">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.17" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="3.1.13" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\IdentityGateway.Core\IdentityGateway.Core.csproj" />
+	</ItemGroup>
+
+</Project>

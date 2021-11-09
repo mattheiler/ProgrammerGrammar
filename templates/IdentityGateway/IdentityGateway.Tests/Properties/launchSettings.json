@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "IdentityGateway.Tests": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

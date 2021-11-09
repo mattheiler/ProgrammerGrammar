@@ -1,0 +1,48 @@
+﻿$breakpoints: (
+    xs: 0,
+    sm: 600px,
+    md: 960px,
+    lg: 1280px,
+    xl: 1920px
+);
+
+@mixin media-eq($name, $breakpoints: $breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+    $min: map-get($breakpoints, $name);
+    $max: map-get($breakpoints, nth($breakpoint-names, min(length($breakpoint-names), index($breakpoint-names, $name) + 1)));
+
+    @media (min-width: $min) and (max-width: if($max != 0, $max - 1px, 5000px)) {
+        @content;
+    }
+}
+
+@mixin media-lt($name, $breakpoints: $breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+    $max: map-get($breakpoints, $name);
+
+    @media (max-width: $max - 1px) {
+        @content;
+    }
+}
+
+@mixin media-lteq($name, $breakpoints: $breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+    $max: map-get($breakpoints, nth($breakpoint-names, index($breakpoint-names, $name) + 1));
+
+    @media (max-width: $max - 1px) {
+        @content;
+    }
+}
+
+@mixin media-gt($name, $breakpoints: $breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+    $min: map-get($breakpoints, nth($breakpoint-names, index($breakpoint-names, $name) + 1));
+
+    @media (min-width: $min) {
+        @content;
+    }
+}
+
+@mixin media-gteq($name, $breakpoints: $breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+    $min: map-get($breakpoints, $name);
+
+    @media (min-width: $min) {
+        @content;
+    }
+}

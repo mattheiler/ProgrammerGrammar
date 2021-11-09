@@ -1,0 +1,46 @@
+@import '../node_modules/@angular/material/theming';
+
+@include mat-core();
+
+$fonts: mat-typography-config();
+$primary: mat-palette($mat-purple);
+$accent: mat-palette($mat-deep-orange);
+$warn: mat-palette($mat-red);
+$theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
+@include angular-material-typography($fonts);
+
+.text-error {
+    color: mat-color($warn) !important;
+}
+
+// defaults
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+img {
+    vertical-align: middle;
+}
+
+// scrollbar
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
