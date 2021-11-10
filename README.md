@@ -20,7 +20,8 @@ dotnet nuget add source https://nuget.pkg.github.com/mattheiler/index.json
 dotnet add PROJECT package ProgrammerGrammar
 ```
 
-### Usages
+## Usage
+
 ```
 dotnet new command
 dotnet new identitygateway
