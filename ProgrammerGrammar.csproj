@@ -13,6 +13,8 @@
       <IncludeBuildOutput>false</IncludeBuildOutput>
       <ContentTargetFolders>content</ContentTargetFolders>
       <NoWarn>$(NoWarn);NU5128</NoWarn>
+      <RepositoryUrl>https://github.com/mattheiler/ProgrammerGrammar</RepositoryUrl>
+      <RepositoryType>git</RepositoryType>
     </PropertyGroup>
   
     <ItemGroup>
