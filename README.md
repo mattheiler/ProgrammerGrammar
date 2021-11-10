@@ -1,29 +1,29 @@
-# README #
+# Programmer Grammar
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Project and items templates for:
+- Command
+- Identity Gateway
+- Query
+- Web Application
 
-### What is this repository for? ###
+## Setup
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+### Add package source
 
-### How do I get set up? ###
+```
+dotnet nuget add source https://nuget.pkg.github.com/mattheiler/index.json
+```
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+### Add package
 
-### Contribution guidelines ###
+```
+dotnet add PROJECT package ProgrammerGrammar
+```
 
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+### Usages
+```
+dotnet new command
+dotnet new identitygateway
+dotnet new query
+dotnet new webapplication
+```
