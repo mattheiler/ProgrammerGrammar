@@ -2,6 +2,9 @@ version: '3.4'
 
 services:
   identitygateway.web:
+    build:
+      args:
+        - EXCLUDE_CLIENT=true
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80

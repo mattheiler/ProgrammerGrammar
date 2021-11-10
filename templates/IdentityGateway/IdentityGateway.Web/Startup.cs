@@ -87,7 +87,7 @@ namespace IdentityGateway.Web
                 .AddControllers();
 
             services
-                .AddSpaStaticFiles(configuration => configuration.RootPath = "dist");
+                .AddSpaStaticFiles(configuration => configuration.RootPath = "App/dist");
 
             services
                 .AddSwaggerGen(options =>
@@ -150,7 +150,7 @@ namespace IdentityGateway.Web
 
             app.UseSpa(spa =>
             {
-                spa.Options.SourcePath = "./";
+                spa.Options.SourcePath = "App";
 
                 if (env.IsDevelopment())
                     spa.UseProxyToSpaDevelopmentServer("http://identitygateway.webapp:4200");

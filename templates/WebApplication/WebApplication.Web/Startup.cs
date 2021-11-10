@@ -63,7 +63,7 @@ namespace WebApplication.Web
                 .AddControllers();
 
             services
-                .AddSpaStaticFiles(configuration => configuration.RootPath = "dist");
+                .AddSpaStaticFiles(configuration => configuration.RootPath = "App/dist");
 
             services
                 .AddSwaggerGen(options =>
@@ -135,7 +135,7 @@ namespace WebApplication.Web
             // This pattern changes in ASP.NET 6.
             app.UseSpa(spa =>
             {
-                spa.Options.SourcePath = "./";
+                spa.Options.SourcePath = "App";
 
                 // If using Docker, make sure to change the host name to the name of your dev server service name.
                 if (env.IsDevelopment())
