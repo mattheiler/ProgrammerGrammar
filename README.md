@@ -1,10 +1,14 @@
 # Programmer Grammar
 
-Project and items templates for:
-- Command
+.NET project and item templates using DDD/CQRS, MediatR, AutoMapper, Entity Framework Core, and FluentValidation.
+
+### Projects
 - Identity Gateway
-- Query
 - Web Application
+
+### Items
+- Command
+- Query
 
 ## Setup
 
