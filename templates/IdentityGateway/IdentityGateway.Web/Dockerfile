@@ -7,7 +7,6 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
-COPY ["NuGet.config", "."]
 COPY ["IdentityGateway.Core/IdentityGateway.Core.csproj", "IdentityGateway.Core/"]
 COPY ["IdentityGateway.Infrastructure/IdentityGateway.Infrastructure.csproj", "IdentityGateway.Infrastructure/"]
 COPY ["IdentityGateway.Web/IdentityGateway.Web.csproj", "IdentityGateway.Web/"]

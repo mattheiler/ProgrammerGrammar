@@ -19,4 +19,4 @@ jobs:
       - name: pack
         run: dotnet pack --configuration Release --output dist /p:PackageVersion=${{ steps.version.outputs.VERSION }} /p:NoDefaultExcludes=true
       - name: push
-        run: dotnet nuget push ./dist/*.nupkg --skip-duplicate --source "GitHub" --api-key ${{ secrets.GITHUB_TOKEN }}
+        run: dotnet nuget push ./dist/*.nupkg --skip-duplicate --source https://nuget.pkg.github.com/mattheiler/index.json --api-key ${{ secrets.GITHUB_TOKEN }}
