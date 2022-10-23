@@ -6,16 +6,16 @@ using MediatR;
 
 namespace Query
 {
-    public class QueryQueryHandler : IRequestHandler<QueryQuery, QueryQueryResult>
+    public class MyQueryQueryHandler : IRequestHandler<MyQueryQuery, MyQueryQueryResult>
     {
         private readonly IConfigurationProvider _mapping;
 
-        public QueryQueryHandler(IConfigurationProvider mapping)
+        public MyQueryQueryHandler(IConfigurationProvider mapping)
         {
             _mapping = mapping;
         }
 
-        public Task<QueryQueryResult> Handle(QueryQuery request, CancellationToken cancellationToken)
+        public Task<MyQueryQueryResult> Handle(MyQueryQuery request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }

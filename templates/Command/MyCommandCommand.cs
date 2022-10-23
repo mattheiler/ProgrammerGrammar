@@ -4,7 +4,7 @@ using MediatR;
 namespace Command
 {
     [Serializable]
-    public class CommandCommand : IRequest
+    public class MyCommandCommand : IRequest
     {
     }
 }

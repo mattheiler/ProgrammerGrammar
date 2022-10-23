@@ -3,9 +3,9 @@ using AutoMapper;
 
 namespace Command
 {
-    public class CommandCommandProfile : Profile
+    public class MyCommandCommandProfile : Profile
     {
-        public CommandCommandProfile()
+        public MyCommandCommandProfile()
         {
             throw new NotImplementedException();
         }

@@ -3,9 +3,9 @@ using FluentValidation;
 
 namespace Command
 {
-    public class CommandCommandValidator : AbstractValidator<CommandCommand>
+    public class MyCommandCommandValidator : AbstractValidator<MyCommandCommand>
     {
-        public CommandCommandValidator()
+        public MyCommandCommandValidator()
         {
             throw new NotImplementedException();
         }

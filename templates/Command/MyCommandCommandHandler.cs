@@ -6,16 +6,16 @@ using MediatR;
 
 namespace Command
 {
-    public class CommandCommandHandler : AsyncRequestHandler<CommandCommand>
+    public class MyCommandCommandHandler : AsyncRequestHandler<MyCommandCommand>
     {
         private readonly IMapper _mapper;
 
-        public CommandCommandHandler(IMapper mapper)
+        public MyCommandCommandHandler(IMapper mapper)
         {
             _mapper = mapper;
         }
 
-        protected override Task Handle(CommandCommand request, CancellationToken cancellationToken)
+        protected override Task Handle(MyCommandCommand request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }

@@ -3,9 +3,9 @@ using AutoMapper;
 
 namespace Query
 {
-    public class QueryQueryProfile : Profile
+    public class MyQueryQueryProfile : Profile
     {
-        public QueryQueryProfile()
+        public MyQueryQueryProfile()
         {
             throw new NotImplementedException();
         }

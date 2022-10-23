@@ -3,9 +3,9 @@ using FluentValidation;
 
 namespace Query
 {
-    public class QueryQueryValidator : AbstractValidator<QueryQuery>
+    public class MyQueryQueryValidator : AbstractValidator<MyQueryQuery>
     {
-        public QueryQueryValidator()
+        public MyQueryQueryValidator()
         {
             throw new NotImplementedException();
         }

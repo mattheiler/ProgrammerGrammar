@@ -1,7 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Matt Heiler",
-  "classifications": [ "ProgrammerGrammar", "Web", "C#" ],
+  "classifications": ["ProgrammerGrammar", "Web", "C#"],
   "name": "Programmer Grammar Command",
   "identity": "ProgrammerGrammar.Command",
   "groupIdentity": "ProgrammerGrammar.Command",
@@ -10,5 +10,5 @@
     "language": "C#",
     "type": "item"
   },
-  "sourceName": "Command"
+  "sourceName": "MyCommand"
 }
