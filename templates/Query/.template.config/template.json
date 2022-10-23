@@ -1,11 +1,11 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Matt Heiler",
-  "classifications": [ "Questar", "Web", "C#" ],
-  "name": "Questar Query",
-  "identity": "Questar.Query",
-  "groupIdentity": "Questar.Query",
-  "shortName": "qquery",
+  "classifications": ["ProgrammerGrammar", "Web", "C#"],
+  "name": "Programmer Grammar Query",
+  "identity": "ProgrammerGrammar.Query",
+  "groupIdentity": "ProgrammerGrammar.Query",
+  "shortName": "query",
   "tags": {
     "language": "C#",
     "type": "item"

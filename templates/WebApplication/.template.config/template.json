@@ -1,7 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Matt Heiler",
-  "classifications": [ "Questar", "Web", "C#" ],
+  "classifications": ["ProgrammerGrammar", "Web", "C#"],
   "name": "Programmer Grammar Web Application",
   "identity": "ProgrammerGrammar.WebApplication",
   "groupIdentity": "ProgrammerGrammar.WebApplication",
